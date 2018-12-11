@@ -19,6 +19,8 @@ Route::get("/", "IndexController@view");
 
 Route::get("/search", "IndexController@search");
 
+Route::post("/search", "IndexController@search_result");
+
 Route::post("/page_adding", "IndexController@page_adding");
 
 Route::get("/{name}", "CreateController@view");

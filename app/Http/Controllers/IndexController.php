@@ -34,4 +34,19 @@ class IndexController extends Controller
 
     	return redirect("/".$request->url);
     }
+    public function search(){
+        return view("search");
+    }
+
+    public function search_result(Request $request){
+
+        $text = $request->text;
+
+        $result = Page::where("title","like","%".$text."%")
+                        ->orWhere("desc","like","%".$text."%")
+                        ->orWhere("content","like","%".$text."%")
+                        ->get();
+        // dd($result->toArray());
+        return view("search_post",compact(["result"]));
+    }
 }

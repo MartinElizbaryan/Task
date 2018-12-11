@@ -8,9 +8,9 @@
 @push("desc",$page["desc"])
 
 @section("content")
-	
-	{!! $page["content"] !!}
-
+	<div class="container">
+		{!! $page["content"] !!}
+	</div>
 
 
 @endsection

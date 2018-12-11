@@ -14,7 +14,7 @@ class PageTableSeeder extends Seeder
         DB::table('pages')->insert([
             'url' => "book",
             'title' => 'Our Book',
-            'desc' => "Meny Books",
+            'desc' => "Many Books",
             'content' => "<h1>Books</h1>",
         ]);
     }
